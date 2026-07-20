@@ -112,3 +112,29 @@ ORDER BY
     customer_rank
 
 LIMIT 10;
+
+
+/*
+=========================================================
+Business Insight
+
+- The highest-revenue customers also contribute
+  substantial profit, making them commercially important
+  customer relationships.
+
+- Customer value differs not only by total spending, but
+  also by purchasing frequency and average order value.
+
+- Some customers generate value through frequent
+  purchases, while others contribute through fewer but
+  higher-value transactions.
+
+Business Relevance
+
+Customer-level performance analysis helps identify priority
+segments for retention programs, loyalty initiatives, and
+targeted marketing. Comparing revenue, profit, purchase
+frequency, and average order value supports more informed
+customer relationship strategies.
+=========================================================
+*/
