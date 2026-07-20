@@ -60,6 +60,32 @@ The objective is to evaluate commercial performance, identify revenue concentrat
 
 ---
 
+## End-to-End Workflow
+
+```text
+Raw Data
+    │
+    ▼
+Power Query (Data Cleaning & Transformation)
+    │
+    ▼
+Data Modeling (Star Schema)
+    │
+    ▼
+DAX Measures & KPIs
+    │
+    ▼
+SQL Business Analysis
+    │
+    ▼
+Interactive Power BI Dashboard
+    │
+    ▼
+Business Insights & Strategic Recommendations
+```
+
+---
+
 ## Tech Stack
 
 - SQL
