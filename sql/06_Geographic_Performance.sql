@@ -101,3 +101,29 @@ FROM ranked_countries
 ORDER BY
     revenue_rank,
     total_profit DESC;
+
+
+/*
+=========================================================
+Business Insight
+
+- Revenue and profitability vary significantly across
+  countries, highlighting differences in market maturity
+  and commercial performance.
+
+- High-revenue markets are not always the most profitable,
+  emphasizing the importance of evaluating both scale and
+  efficiency when prioritizing geographic investments.
+
+- Markets with strong profit margins and consistent order
+  volumes represent attractive opportunities for future
+  expansion.
+
+Business Relevance
+
+Geographic performance analysis enables business leaders
+to identify high-performing markets, optimize regional
+resource allocation, and support data-driven international
+expansion strategies.
+=========================================================
+*/
