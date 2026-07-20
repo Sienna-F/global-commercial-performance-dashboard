@@ -109,3 +109,29 @@ ORDER BY
     category_rank,
 
     total_revenue DESC;
+
+
+/*
+=========================================================
+Business Insight
+
+- Product category performance differs across countries,
+  indicating that customer demand and market preferences
+  are not uniform across regions.
+
+- Ranking categories within each country highlights local
+  growth drivers and reveals where product strategies
+  should be tailored to specific markets.
+
+- Strong-performing categories can be prioritized for
+  investment, while weaker categories may require pricing,
+  marketing, or assortment adjustments.
+
+Business Relevance
+
+Country-level category analysis supports localized
+commercial strategies by helping decision-makers align
+product investments with regional customer demand and
+market performance.
+=========================================================
+*/
