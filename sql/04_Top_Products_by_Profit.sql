@@ -59,3 +59,29 @@ ORDER BY
     total_profit DESC
 
 LIMIT 10;
+
+
+/*
+=========================================================
+Business Insight
+
+- The highest-profit products are not always the same as
+  the highest-revenue products, highlighting differences
+  between sales volume and profitability.
+
+- Profit analysis helps identify products with the
+  strongest financial contribution rather than simply
+  the highest sales.
+
+- Prioritizing high-profit products can improve pricing
+  strategy, product portfolio optimization, and long-term
+  business profitability.
+
+Business Relevance
+
+Profit-based product analysis supports strategic decisions
+on pricing, inventory investment, and product portfolio
+management, ensuring resources are allocated to the most
+valuable products.
+=========================================================
+*/
