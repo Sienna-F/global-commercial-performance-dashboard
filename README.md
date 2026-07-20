@@ -6,6 +6,24 @@ The project explores revenue drivers, product performance, profitability, and st
 
 ---
 
+## Dashboard Preview
+
+### Executive Overview
+
+![Executive Overview](1.PNG)
+
+---
+
+### Commercial Performance Analysis
+
+![Commercial Performance Analysis](2.PNG)
+
+---
+
+### Strategic Insights & Recommendations
+
+![Strategic Insights](3.PNG)
+
 ## Project Overview
 
 This project simulates a real-world commercial analytics scenario for a global electronics retailer.
@@ -14,20 +32,45 @@ The objective is to evaluate commercial performance, identify revenue concentrat
 
 ---
 
-## Business Questions
+## Business Objectives
 
-- Which products generate the highest revenue?
-- Which categories contribute most to profitability?
-- Is revenue growth aligned with profit growth?
-- Is business performance concentrated in a few categories?
-- Which areas provide future growth opportunities?
+• Identify key revenue drivers.
+
+• Evaluate product profitability.
+
+• Assess revenue concentration.
+
+• Discover commercial growth opportunities.
+
+• Deliver actionable business recommendations.
 
 ---
 
-## Tools
+## Tech Stack
 
 - SQL
 - Power BI
 - DAX
 - Power Query
 - Excel
+
+## Key Findings
+
+- Computers generated the highest revenue contribution.
+- Revenue and profitability show a strong positive relationship.
+- Revenue is concentrated in a limited number of categories.
+- Mid-tier categories present future growth opportunities.
+
+## Repository Structure
+
+📂 Dashboard
+- Power BI (.pbix)
+
+📂 SQL
+- Business analysis SQL queries
+
+📂 Images
+- Dashboard screenshots
+
+📂 README
+- Project documentation
