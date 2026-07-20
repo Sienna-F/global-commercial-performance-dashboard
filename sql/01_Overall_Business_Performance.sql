@@ -59,3 +59,28 @@ SELECT
     ) AS average_order_value
 
 FROM sales_summary;
+
+/*
+=========================================================
+Business Insight
+
+- The business generated approximately $55.8M in revenue
+  and $32.7M in profit.
+
+- The overall profit margin reached approximately 58.6%,
+  indicating strong profitability across the portfolio.
+
+- The company processed approximately 26.3K orders from
+  11.9K active customers.
+
+- Average order value was approximately $2.1K, suggesting
+  relatively high-value transactions.
+
+Business Relevance
+
+These KPIs provide an executive baseline for evaluating
+commercial scale, profitability, customer activity, and
+transaction value. They also support deeper analysis of
+market, category, and product-level performance.
+=========================================================
+*/
