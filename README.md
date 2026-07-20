@@ -101,19 +101,22 @@ Business Insights & Strategic Recommendations
 - Revenue is concentrated in a limited number of categories.
 - Mid-tier categories present future growth opportunities.
 
-Repository Structure
+## Repository Structure
 
 📁 sql
-   ├── 01_Overall_Business_Performance.sql
-   ├── 02_Revenue_Trend.sql
-   ├── 03_Top_Products_by_Revenue.sql
-   ├── 04_Top_Products_by_Profit.sql
-   ├── 05_Category_Performance.sql
-   ├── 06_Geographic_Performance.sql
-   ├── 07_Customer_Value_Analysis.sql
-   ├── 08_Store_Productivity_Analysis.sql
-   └── 09_Sales_Performance_Driver_Analysis.sql
+
+- 01_Overall_Business_Performance.sql
+- 02_Revenue_Trend.sql
+- 03_Top_Products_by_Revenue.sql
+- 04_Top_Products_by_Profit.sql
+- 05_Category_Performance.sql
+- 06_Geographic_Performance.sql
+- 07_Customer_Value_Analysis.sql
+- 08_Store_Productivity_Analysis.sql
+- 09_Sales_Performance_Driver_Analysis.sql
+
 
 📄 README.md
+
 
 🖼 Dashboard Screenshots
