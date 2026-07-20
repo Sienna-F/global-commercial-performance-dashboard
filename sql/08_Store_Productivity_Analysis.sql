@@ -128,3 +128,30 @@ ORDER BY
     productivity_rank
 
 LIMIT 10;
+
+
+/*
+=========================================================
+Business Insight
+
+- Store productivity varies significantly across physical
+  locations, even among stores generating similar levels
+  of total revenue.
+
+- Revenue per square meter provides a more meaningful
+  measure of operational efficiency than revenue alone,
+  because it accounts for differences in store size.
+
+- High-productivity stores may offer useful benchmarks for
+  location strategy, space utilization, merchandising, and
+  future retail expansion.
+
+Business Relevance
+
+Store productivity analysis helps management distinguish
+between large stores with high absolute sales and locations
+that use retail space more efficiently. This supports
+evidence-based decisions on store optimization, expansion,
+and resource allocation.
+=========================================================
+*/
