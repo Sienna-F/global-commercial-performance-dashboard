@@ -26,7 +26,9 @@ The project explores revenue drivers, product performance, profitability, and st
 
 ## Data Model
 
-The dashboard is built using a star schema with a central Sales fact table connected to Customers, Products, Stores, and Date dimension tables.
+The dashboard is built using a star schema, with Sales as the central fact table connected to multiple dimension tables including Customers, Products, Stores, and Date. 
+
+The model structure supports scalable KPI calculations and business performance analysis using DAX measures.
 
 ![Data Model](4.PNG)
 
