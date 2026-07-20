@@ -30,6 +30,14 @@ The dashboard is built using a star schema with a central Sales fact table conne
 
 ![Data Model](4.PNG)
 
+## Data Model
+
+The dashboard is built using a star schema with a central Sales fact table connected to Customers, Products, Stores, and Date dimension tables.
+
+<p align="center">
+  <img src="4.PNG" width="850">
+</p>
+
 ## Project Overview
 
 This project simulates a real-world commercial analytics scenario for a global electronics retailer.
