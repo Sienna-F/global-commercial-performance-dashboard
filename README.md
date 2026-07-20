@@ -24,6 +24,12 @@ The project explores revenue drivers, product performance, profitability, and st
 
 ![Strategic Insights](3.PNG)
 
+## Data Model
+
+The dashboard is built using a star schema with a central Sales fact table connected to Customers, Products, Stores, and Date dimension tables.
+
+![Data Model](4.PNG)
+
 ## Project Overview
 
 This project simulates a real-world commercial analytics scenario for a global electronics retailer.
