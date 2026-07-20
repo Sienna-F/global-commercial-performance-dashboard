@@ -58,3 +58,26 @@ ORDER BY
     total_revenue DESC
 
 LIMIT 10;
+
+
+/*
+=========================================================
+Business Insight
+
+- A small number of products contribute a significant
+  proportion of total revenue.
+
+- Identifying top-performing products helps prioritize
+  inventory planning, marketing investment, and product
+  portfolio management.
+
+- High-revenue products should be monitored closely to
+  maintain sustainable commercial performance.
+
+Business Relevance
+
+Product-level revenue analysis enables data-driven
+decisions on product strategy, resource allocation,
+and future growth opportunities.
+=========================================================
+*/
