@@ -67,3 +67,25 @@ SELECT
 FROM monthly_revenue
 
 ORDER BY order_month;
+
+/*
+=========================================================
+Business Insight
+
+- Monthly revenue shows fluctuations over time, reflecting
+  seasonal demand and changing sales performance.
+
+- Month-over-month (MoM) growth highlights periods of
+  strong expansion as well as temporary slowdowns.
+
+- Tracking revenue trends helps identify growth momentum,
+  detect performance declines early, and evaluate the
+  effectiveness of commercial initiatives.
+
+Business Relevance
+
+Revenue trend analysis provides executives with a clear
+view of business performance over time and supports
+forecasting, budgeting, and strategic planning.
+=========================================================
+*/
