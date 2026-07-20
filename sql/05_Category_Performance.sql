@@ -81,3 +81,29 @@ ORDER BY
     total_revenue DESC,
 
     total_profit DESC;
+
+
+/*
+=========================================================
+Business Insight
+
+- Product categories differ significantly in revenue,
+  profitability, and profit margin, indicating varying
+  levels of commercial performance.
+
+- High-revenue categories are not necessarily the most
+  profitable, making it important to evaluate both sales
+  volume and margin when prioritizing investments.
+
+- Categories with strong profit margins may represent
+  opportunities for expansion, while low-margin categories
+  may require pricing or cost optimization.
+
+Business Relevance
+
+Category-level performance analysis supports strategic
+product portfolio management by identifying where to
+invest, optimize, or improve profitability across the
+business.
+=========================================================
+*/
