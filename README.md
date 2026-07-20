@@ -46,6 +46,20 @@ The objective is to evaluate commercial performance, identify revenue concentrat
 
 ---
 
+## Business Questions
+
+1. How is the company performing across its core commercial KPIs?
+2. How has revenue changed over time?
+3. Which products generate the highest revenue?
+4. Which products generate the highest profit?
+5. Which product categories deliver the strongest revenue, profit, and margin?
+6. Which countries are the strongest commercial markets?
+7. Which customers contribute the greatest business value?
+8. Which stores achieve the highest operational productivity?
+9. Which product categories perform best within each country?
+
+---
+
 ## Tech Stack
 
 - SQL
