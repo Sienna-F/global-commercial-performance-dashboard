@@ -44,19 +44,19 @@ The analysis addresses the following commercial questions:
 
 ## Executive Overview
 
-![Executive Overview](1.PNG)
+![Executive Overview](01_Executive Overview.PNG)
 
 ---
 
 ## Commercial Performance Analysis
 
-![Commercial Performance Analysis](2.PNG)
+![Commercial Performance Analysis](02_Commerial Performance Analysis.PNG)
 
 ---
 
 ## Strategic Insights & Recommendations
 
-![Strategic Insights](3.PNG)
+![Strategic Insights](03_Strategi Insights & Recommendations.PNG)
 
 ---
 
@@ -121,7 +121,7 @@ The dashboard is built using a star schema, with Sales as the central fact table
 
 The model supports scalable KPI calculations, business performance analysis, and interactive reporting using DAX measures.
 
-![Data Model](4.PNG)
+![Data Model](04_Data Model.PNG)
 
 ---
 
