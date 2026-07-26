@@ -26,17 +26,14 @@ The objective is to evaluate business performance, identify key revenue drivers,
 
 # Business Questions
 
-The analysis addresses the following commercial questions:
+This analysis addresses the following commercial questions:
 
-1. How is the company performing across its core commercial KPIs?
-2. How has revenue changed over time?
-3. Which products generate the highest revenue?
-4. Which products generate the highest profit?
-5. Which categories deliver the strongest revenue, profit, and margin performance?
-6. Which markets generate the greatest business value?
-7. Which customers contribute the highest business value?
-8. Which locations operate most efficiently?
-9. What factors drive sales performance across different markets?
+1. What are the key drivers behind overall business performance?
+2. How has revenue and profitability evolved over time?
+3. Which products and categories contribute the most business value?
+4. Which markets demonstrate the strongest growth potential?
+5. Which customers and locations drive commercial performance?
+6. What factors explain differences in sales performance across markets?
 
 ---
 
@@ -44,19 +41,19 @@ The analysis addresses the following commercial questions:
 
 ## Executive Overview
 
-![Executive Overview](01_Executive Overview.PNG)
+![Executive Dashboard](./01_Executive_Overview.PNG)
 
 ---
 
 ## Commercial Performance Analysis
 
-![Commercial Performance Analysis](02_Commerial Performance Analysis.PNG)
+![Commercial Performance Analysis](./02_Commercial_Performance_Analysis.PNG)
 
 ---
 
 ## Strategic Insights & Recommendations
 
-![Strategic Insights](03_Strategi Insights & Recommendations.PNG)
+![Strategic Insights](./03_Strategic_Insights_and_Recommendations.PNG)
 
 ---
 
@@ -107,10 +104,10 @@ Business Insights & Strategic Recommendations
 
 # Tech Stack
 
-- SQL
 - Power BI
 - DAX
 - Power Query
+- SQL
 - Excel
 
 ---
@@ -121,13 +118,13 @@ The dashboard is built using a star schema, with Sales as the central fact table
 
 The model supports scalable KPI calculations, business performance analysis, and interactive reporting using DAX measures.
 
-![Data Model](04_Data Model.PNG)
+![Data Model](./04_Data_Model.PNG)
 
 ---
 
-# SQL-Driven Business Analysis
+# Analytical Approach & SQL Business Analysis
 
-The project includes SQL-driven analysis covering key commercial questions.
+SQL was used to explore business performance drivers and validate analytical findings before dashboard development.
 
 | Analysis Area | Business Question |
 |---|---|
@@ -149,3 +146,17 @@ The SQL analysis focuses on:
 - Applying SQL techniques including aggregations, joins, CTEs, and window functions to answer business problems.
 - Identifying revenue drivers, profitability patterns, and growth opportunities.
 - Supporting data-driven commercial decisions.
+
+---
+
+## Project Impact
+
+This project demonstrates an end-to-end business intelligence workflow, transforming raw commercial data into actionable insights.
+
+Key capabilities demonstrated:
+
+- Building analytical data models using star schema design
+- Developing KPI-driven Power BI dashboards
+- Using SQL to answer commercial questions
+- Translating analytical findings into strategic recommendations
+- Supporting data-driven business decisions
