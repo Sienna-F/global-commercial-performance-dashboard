@@ -149,7 +149,7 @@ SQL was used to translate management questions into analytical queries and valid
 | [Geographic Performance](sql/06_Geographic_Performance.sql) | Evaluate performance across markets | Multi-table joins, aggregation |
 | [Customer Value Analysis](sql/07_Customer_Value_Analysis.sql) | Identify high-value customers | CTEs, aggregation, ranking |
 | [Store Productivity Analysis](sql/08_Store_Productivity_Analysis.sql) | Compare store-level efficiency | Aggregation, normalized KPIs |
-| [Sales Performance Driver Analysis](sql/09_Sales_Performance_Driver_Analysis.sql) | Examine the roles of order volume and order value | CTEs, window functions |
+| [Country-Category Performance](sql/09_Sales_Performance_Driver_Analysis.sql) | Rank product categories within each country | CTEs, multiple joins, partitioned `DENSE_RANK` |
 
 The complete queries and supporting notes are available in the [`sql`](sql/) directory.
 
