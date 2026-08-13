@@ -1,162 +1,233 @@
 # Global Commercial Performance Dashboard
 
-An end-to-end Business Intelligence project analyzing global commercial performance using SQL, Power BI, and data-driven business analysis.
+**End-to-End Business Intelligence Project | SQL · Power BI · Power Query · DAX**
 
-This project explores revenue drivers, product performance, profitability patterns, and commercial growth opportunities through interactive dashboards and business-focused analytical workflows.
+An end-to-end business intelligence project analyzing six years of commercial data for a simulated global electronics retailer. I independently transformed the data, designed the analytical model, developed SQL and DAX calculations, built a three-page Power BI dashboard, and translated the findings into commercial recommendations.
 
----
+## Project at a Glance
 
-# Project Overview
+| Scope | Result |
+|---|---:|
+| Analysis period | 2016-2021 |
+| Total revenue | $55.8M |
+| Total profit | $32.7M |
+| Profit margin | 58.6% |
+| Orders | 26.3K |
+| Active customers | 11.9K |
+| Average order value | $2.1K |
+| SQL analyses | 9 |
+| Dashboard pages | 3 |
 
-This project simulates a real-world commercial analytics scenario for a global electronics retailer.
+## Business Context
 
-The objective is to evaluate business performance, identify key revenue drivers, analyze profitability across products and markets, and generate actionable recommendations to support future commercial growth.
+Management needs a consolidated view of revenue, profitability, customer activity, product performance, and market performance. The purpose of this project is to convert transactional sales data into an executive reporting solution that supports performance monitoring and commercial decision-making.
 
----
+The analysis focuses on four management priorities:
 
-# Business Objectives
+- Monitor overall revenue, profit, margin, orders, customers, and average order value.
+- Identify the products, categories, markets, customers, and stores contributing the most business value.
+- Compare revenue contribution with profitability to avoid evaluating performance through sales alone.
+- Translate analytical findings into practical commercial actions and areas for further investigation.
 
-- Identify key revenue drivers and performance trends.
-- Evaluate product and category profitability.
-- Assess revenue concentration across markets.
-- Discover commercial growth opportunities.
-- Deliver data-driven business recommendations.
+## Business Questions
 
----
+1. What are the key drivers of overall commercial performance?
+2. How have revenue and profit changed between 2016 and 2021?
+3. Which products and categories contribute the most revenue and profit?
+4. Which geographic markets generate the greatest commercial value?
+5. Which customers and store locations contribute most strongly to performance?
+6. How do order volume and average order value help explain differences in sales performance?
 
-# Business Questions
+## My Contribution
 
-This analysis addresses the following commercial questions:
+I independently completed the full analytical workflow:
 
-1. What are the key drivers behind overall business performance?
-2. How has revenue and profitability evolved over time?
-3. Which products and categories contribute the most business value?
-4. Which markets demonstrate the strongest growth potential?
-5. Which customers and locations drive commercial performance?
-6. What factors explain differences in sales performance across markets?
+- Cleaned and transformed the source data using Power Query.
+- Designed the analytical model and table relationships in Power BI.
+- Developed reusable DAX measures for revenue, profit, margin, orders, active customers, and average order value.
+- Separated numeric measures from presentation-specific display measures to support both analysis and consistent executive KPI formatting.
+- Developed nine SQL analyses to investigate and validate commercial performance drivers.
+- Designed a three-page Power BI dashboard for executive reporting, diagnostic analysis, and strategic recommendations.
+- Converted analytical findings into business recommendations while distinguishing observed relationships from causal conclusions.
 
----
+## Dashboard Walkthrough
 
-# Dashboard Preview
+### 1. Executive Overview
 
-## Executive Overview
+Provides a management-level view of the core KPIs, revenue and profit trends, leading markets, and category contribution.
 
-![Executive Dashboard](./01_Executive_Overview.PNG)
+![Executive Overview](01_Executive_Overview.PNG)
 
----
+### 2. Commercial Performance Analysis
 
-## Commercial Performance Analysis
+Examines category revenue contribution and the relationship between product revenue and profit to identify concentration, profitability patterns, and diversification opportunities.
 
-![Commercial Performance Analysis](./02_Commercial_Performance_Analysis.PNG)
+![Commercial Performance Analysis](02_Commercial_Performance_Analysis.PNG)
 
----
+### 3. Strategic Insights and Recommendations
 
-## Strategic Insights & Recommendations
+Summarizes the main findings, proposed commercial actions, and areas requiring further analysis.
 
-![Strategic Insights](./03_Strategic_Insights_and_Recommendations.PNG)
+![Strategic Insights and Recommendations](03_Strategic_Insights_and_Recommendations.PNG)
 
----
+## Data Model
 
-# Key Findings
+The Power BI model uses `Sales` as the central fact table, connected to `Customers`, `Products`, `Stores`, and `Date` dimension tables through one-to-many relationships.
 
-- Computers represent the largest revenue contributor across product categories.
-- Revenue growth is strongly associated with profitability performance.
-- Commercial performance is concentrated among a limited number of categories and markets.
-- Mid-tier categories provide opportunities for portfolio diversification and future growth.
+This structure separates transactional measures from descriptive business attributes, supports consistent filtering across dashboard pages, and reduces duplicated calculation logic. Dedicated measure tables organize reusable numeric calculations and presentation-specific KPI measures.
 
----
+![Power BI Data Model](04_Data_Model.PNG)
 
-# Strategic Recommendations
+> `Exchange_Rates` is not included in the documented analytical model because the reviewed core measures use USD product prices directly and do not reference the table.
 
-Based on the analysis, the project identifies several business actions:
+## DAX Measure Design
 
-- Prioritize investment in high-performing product categories.
-- Improve portfolio balance by expanding growth opportunities in underdeveloped categories.
-- Use commercial performance insights to support data-driven decision-making.
+The dashboard separates reusable numeric measures from display measures. Numeric measures remain available for aggregation, filtering, and visual analysis, while display measures format executive KPI cards as values such as `$55.8M`, `26.3K`, and `58.6%`.
 
----
+### Total Revenue
 
-# End-to-End Workflow
-
-```text
-Raw Data
-    │
-    ▼
-Power Query (Data Cleaning & Transformation)
-    │
-    ▼
-Data Modeling (Star Schema)
-    │
-    ▼
-DAX Measures & KPI Development
-    │
-    ▼
-SQL Business Analysis
-    │
-    ▼
-Interactive Power BI Dashboard
-    │
-    ▼
-Business Insights & Strategic Recommendations
+```DAX
+Total Revenue Value =
+SUMX(
+    Sales,
+    Sales[Quantity] * RELATED(Products[Unit Price USD])
+)
 ```
 
----
+### Total Profit
 
-# Tech Stack
+```DAX
+Total Profit Value =
+[Total Revenue Value] - [Total Cost]
+```
 
-- Power BI
-- DAX
-- Power Query
-- SQL
-- Excel
+### Total Orders
 
----
+```DAX
+Total Orders Value =
+DISTINCTCOUNT(Sales[Order Number])
+```
 
-# Data Model
+### Active Customers
 
-The dashboard is built using a star schema, with Sales as the central fact table connected to multiple dimension tables including Customers, Products, Stores, and Date.
+```DAX
+Active Customers Value =
+DISTINCTCOUNT(Sales[CustomerKey])
+```
 
-The model supports scalable KPI calculations, business performance analysis, and interactive reporting using DAX measures.
+### Average Order Value
 
-![Data Model](./04_Data_Model.PNG)
+```DAX
+Average Order Value Value =
+DIVIDE(
+    [Total Revenue Value],
+    [Total Orders Value]
+)
+```
 
----
+### Profit Margin
 
-# Analytical Approach & SQL Business Analysis
+```DAX
+Profit Margin Value =
+DIVIDE(
+    [Total Profit Value],
+    [Total Revenue Value]
+)
+```
 
-SQL was used to explore business performance drivers and validate analytical findings before dashboard development.
+These measures use iterator, relationship, distinct-count, and safe-division functions to keep KPI definitions consistent throughout the report.
 
-| Analysis Area | Business Question |
-|---|---|
-| Executive Performance | How is the company's overall commercial performance? |
-| Revenue Trend Analysis | How has revenue changed over time? |
-| Product Revenue Analysis | Which products generate the highest revenue? |
-| Product Profitability Analysis | Which products generate the highest profit? |
-| Category Performance Analysis | Which categories deliver the strongest revenue, profit, and margin? |
-| Geographic Performance Analysis | Which markets generate the greatest business value? |
-| Customer Value Analysis | Which customers contribute the highest business value? |
-| Store Productivity Analysis | Which locations operate most efficiently? |
-| Sales Driver Analysis | What factors drive sales performance across markets? |
+## SQL Business Analysis
 
-Detailed SQL queries are available in the `/sql` directory.
+SQL was used to translate management questions into analytical queries and validate the performance patterns presented in Power BI.
 
-The SQL analysis focuses on:
+| Analysis | Business purpose | Main techniques |
+|---|---|---|
+| [Overall Business Performance](sql/01_Overall_Business_Performance.sql) | Establish the executive KPI baseline | Aggregation, distinct counts |
+| [Revenue Trend](sql/02_Revenue_Trend.sql) | Evaluate performance over time | Date grouping, aggregation |
+| [Top Products by Revenue](sql/03_Top_Products_by_Revenue.sql) | Rank products by sales contribution | Joins, aggregation, ranking |
+| [Top Products by Profit](sql/04_Top_Products_by_Profit.sql) | Compare product profitability | Joins, calculated metrics, ranking |
+| [Category Performance](sql/05_Category_Performance.sql) | Compare category revenue, profit, and margin | CTEs, grouped metrics |
+| [Geographic Performance](sql/06_Geographic_Performance.sql) | Evaluate performance across markets | Multi-table joins, aggregation |
+| [Customer Value Analysis](sql/07_Customer_Value_Analysis.sql) | Identify high-value customers | CTEs, aggregation, ranking |
+| [Store Productivity Analysis](sql/08_Store_Productivity_Analysis.sql) | Compare store-level efficiency | Aggregation, normalized KPIs |
+| [Sales Performance Driver Analysis](sql/09_Sales_Performance_Driver_Analysis.sql) | Examine the roles of order volume and order value | CTEs, window functions |
 
-- Translating business questions into analytical queries.
-- Applying SQL techniques including aggregations, joins, CTEs, and window functions to answer business problems.
-- Identifying revenue drivers, profitability patterns, and growth opportunities.
-- Supporting data-driven commercial decisions.
+The complete queries and supporting notes are available in the [`sql`](sql/) directory.
 
----
+## Key Findings
 
-## Project Impact
+- The business generated **$55.8M in revenue** and **$32.7M in profit**, representing an overall profit margin of **58.6%** across **26.3K orders**.
+- **Computers generated $19.3M**, making them the largest category contributor and indicating meaningful reliance on a limited part of the product portfolio.
+- Home Appliances were the second-largest category at **$10.8M**, followed by Cameras and Camcorders at **$6.5M**, Cell Phones at **$6.2M**, and TV and Video at **$5.9M**.
+- Product revenue and profit showed a strong positive relationship, but products still differed in their revenue and profitability profiles; commercial prioritization should therefore consider both measures.
+- Revenue was concentrated across a limited number of categories and markets, creating both performance strength and concentration risk.
+- Mid-tier categories may provide diversification opportunities, but inventory, promotion, demand, and acquisition-cost data would be required before making investment decisions.
 
-This project demonstrates an end-to-end business intelligence workflow, transforming raw commercial data into actionable insights.
+## Business Recommendations
 
-Key capabilities demonstrated:
+1. **Protect core-category performance**  
+   Monitor revenue, profit, margin, and concentration within the Computers category rather than relying on total sales growth alone.
 
-- Building analytical data models using star schema design
-- Developing KPI-driven Power BI dashboards
-- Using SQL to answer commercial questions
-- Translating analytical findings into strategic recommendations
-- Supporting data-driven business decisions
+2. **Prioritize profitable growth**  
+   Evaluate products using both revenue contribution and profitability before allocating commercial resources.
+
+3. **Test portfolio diversification**  
+   Identify mid-tier categories with stable margins and test targeted promotions before committing to broader expansion.
+
+4. **Strengthen market-level monitoring**  
+   Track revenue, active customers, order volume, and average order value together to distinguish broad-based growth from market concentration.
+
+5. **Extend the analysis with operational data**  
+   Incorporate inventory, returns, promotional spend, and customer acquisition cost to improve commercial planning and explain performance changes more fully.
+
+## Analytical Workflow
+
+1. Reviewed the business scenario and defined the management questions.
+2. Cleaned and transformed the source data in Power Query.
+3. Designed the fact-and-dimension data model in Power BI.
+4. Created reusable numeric and display DAX measures.
+5. Used SQL to investigate and validate business performance patterns.
+6. Built the executive and diagnostic dashboard pages.
+7. Translated the findings into recommendations and further-analysis priorities.
+
+## Tools and Techniques
+
+- **Power BI:** data modeling, interactive reporting, KPI design, dashboard development
+- **Power Query:** data cleaning and transformation
+- **DAX:** `SUMX`, `RELATED`, `DISTINCTCOUNT`, `DIVIDE`, reusable measures, display formatting
+- **SQL:** joins, aggregations, CTEs, window functions, ranking, business-question analysis
+- **Excel:** source-data handling and preliminary review
+
+## Data and Limitations
+
+This is a portfolio project based on a simulated commercial dataset and does not represent the performance of a real company.
+
+The available data does not capture every possible commercial driver, including inventory availability, returns, promotional spend, customer acquisition cost, or competitor activity. The findings identify patterns and relationships in the available data; they should not be interpreted as proof of causality or as financial forecasts.
+
+## Repository Structure
+
+```text
+global-commercial-performance-dashboard/
+├── README.md
+├── 01_Executive_Overview.PNG
+├── 02_Commercial_Performance_Analysis.PNG
+├── 03_Strategic_Insights_and_Recommendations.PNG
+├── 04_Data_Model.PNG
+└── sql/
+    ├── README.md
+    ├── 01_Overall_Business_Performance.sql
+    ├── 02_Revenue_Trend.sql
+    ├── 03_Top_Products_by_Revenue.sql
+    ├── 04_Top_Products_by_Profit.sql
+    ├── 05_Category_Performance.sql
+    ├── 06_Geographic_Performance.sql
+    ├── 07_Customer_Value_Analysis.sql
+    ├── 08_Store_Productivity_Analysis.sql
+    └── 09_Sales_Performance_Driver_Analysis.sql
+```
+
+## Author
+
+**Wenqing Fu**  
+Business Intelligence · Data Analysis · Commercial Performance
