@@ -78,8 +78,6 @@ This structure separates transactional measures from descriptive business attrib
 
 ![Power BI Data Model](04_Data_Model.PNG)
 
-> `Exchange_Rates` is not included in the documented analytical model because the reviewed core measures use USD product prices directly and do not reference the table.
-
 ## DAX Measure Design
 
 The dashboard separates reusable numeric measures from display measures. Numeric measures remain available for aggregation, filtering, and visual analysis, while display measures format executive KPI cards as values such as `$55.8M`, `26.3K`, and `58.6%`.
